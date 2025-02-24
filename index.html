@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kabaddi Score Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+   
+      <div class="container">
+        <h1>Kabaddi Score Tracker</h1>
+        <div class="timer">Match Timer: <span id="matchTimer">20:00</span></div>
+        <button onclick="toggleMatch()" id="startMatchButton">
+          Start Match
+        </button>
+        <button onclick="toggleMatchTimer()" id="pauseResume" disabled>
+          Pause
+        </button>
+
+        <div class="raid-timer-container">
+          <div class="timer">
+            Raid Timer: <span id="raidTimer">30</span> sec
+          </div>
+          <button id="raidButton" class="start" onclick="toggleRaid()">
+            Start Raid
+          </button>
+        </div>
+
+        <div class="team" id="teamA">
+          <h2 id="teamATitle">Team A</h2>
+          <div class="score" id="scoreA">0</div>
+          <button class="increase" onclick="changeScore('A', 1)">+1</button>
+          <button class="decrease" onclick="changeScore('A', -1)">-1</button>
+        </div>
+
+        <div class="team" id="teamB">
+          <h2 id="teamBTitle">Team B</h2>
+          <div class="score" id="scoreB">0</div>
+          <button class="increase" onclick="changeScore('B', 1)">+1</button>
+          <button class="decrease" onclick="changeScore('B', -1)">-1</button>
+        </div>
+
+        <br />
+        <button class="reset" onclick="resetScores()">Reset Scores</button>
+      </div>
+    
+    <script src="script.js"></script>
+  </body>
+</html>
